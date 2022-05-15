@@ -1,5 +1,8 @@
 {
   "dependencies": {
-    "inquirer": "^8.2.2"
+    "crypto-js": "^4.1.1",
+    "express": "^4.18.1",
+    "inquirer": "^8.2.4",
+    "nanoid": "^3.3.4"
   }
 }
