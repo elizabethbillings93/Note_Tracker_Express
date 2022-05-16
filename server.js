@@ -7,7 +7,7 @@ const fs= require('fs');
 // calling path library
 const path= require('path');
 // make a route a variable
-const api = require('./routes/HtmlRoutes.js');
+const api = require('./routes');
 // Use open port or 3001
 const PORT = process.env.port || 3001;
 // // Middelwares
@@ -17,11 +17,11 @@ app.use (express.static ('public'));
 app.use('/api',api);
 // create paths
 app.get('/', (req,res)=>
-res.sendFile(path.join(__dirname, '/public/index')));
+    res.sendFile(path.join(__dirname, 'public/index.html')));
 app.get('/notes',(req,res)=>
-    res.sendFile(path.join(__dirname, '/public/notes')));
-app.get('*', (req,res)=>
-res.sendFile(path.join(__dirname, '/public/index')));
+    res.sendFile(path.join(__dirname, 'public/notes.html')));
+
+ 
 // listen to port
 app.listen(PORT,()=>{
     console.log(`Server listening to http://localhost:${PORT}`);});
